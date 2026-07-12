@@ -371,13 +371,13 @@
             gap: 1.8rem;
         }
 
-        /* ===== NUEVO ESTILO PARA GASTRONOMÍA Y TRANSPORTE ===== */
-        .grid-dishes {
+        /* ===== TARJETAS MEJORADAS ===== */
+        .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.8rem;
         }
-        .dish-card {
+        .info-card {
             background: var(--color-surface);
             border-radius: var(--radius);
             padding: 1.5rem 1.8rem;
@@ -385,16 +385,16 @@
             border: 1px solid var(--color-border);
             transition: transform var(--transition), box-shadow var(--transition);
         }
-        .dish-card:hover {
+        .info-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 20px var(--color-shadow);
         }
-        .dish-card .dish-icon {
+        .info-card .card-icon {
             font-size: 2rem;
             display: block;
             margin-bottom: 0.3rem;
         }
-        .dish-card h4 {
+        .info-card h4 {
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--color-accent);
@@ -402,11 +402,21 @@
             border-bottom: 1px solid var(--color-border);
             padding-bottom: 0.4rem;
         }
-        .dish-card p {
+        .info-card p {
             color: var(--color-text-muted);
             font-size: 0.95rem;
             line-height: 1.7;
             margin-bottom: 0;
+        }
+        .info-card ul {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .info-card ul li {
+            margin-bottom: 0.3rem;
         }
 
         .toc {
@@ -799,7 +809,7 @@
             }
             .grid-2,
             .grid-3,
-            .grid-dishes {
+            .grid-cards {
                 grid-template-columns: 1fr;
             }
             .hero .hero-flag {
@@ -986,63 +996,82 @@
                     </ul>
                 </section>
 
-                <!-- CULTURA Y TRADICIONES -->
+                <!-- CULTURA Y TRADICIONES (mejorado con tarjetas) -->
                 <section id="cultura">
                     <h2 class="section-title">🎌 Cultura y tradiciones japonesas</h2>
                     <p>La cultura japonesa es un tapiz de rituales, respeto y armonía. Cada gesto, cada palabra y cada objeto tienen un significado profundo. Conocer estas costumbres no solo te ayudará a integrarte mejor, sino que también enriquecerá tu experiencia de viaje.</p>
 
-                    <ul>
-                        <li><strong>Ceremonia del té (sado):</strong> Es un arte que refleja la estética japonesa de la sencillez, la atención plena y la conexión con la naturaleza. Se basa en la preparación y el consumo de té matcha (té verde en polvo) en un ambiente de total serenidad. Puedes vivir esta experiencia en Kioto o en Tokio, en casas de té tradicionales. No es solo beber té, sino un ritual que implica cada movimiento, desde la forma de sostener la taza hasta la manera de inclinarse ante el anfitrión.</li>
-                        <li><strong>Festivales (matsuri):</strong> Japón celebra cientos de festivales a lo largo del año, cada uno con su propia historia y significado. El <strong>Gion Matsuri</strong> en Kioto (julio) es uno de los más famosos, con sus carrozas decoradas y su procesión de más de 30 carros de madera. El <strong>Kanda Matsuri</strong> en Tokio (mayo) es una celebración dedicada al santuario de Kanda, con desfiles de mikoshi (santuarios portátiles). El <strong>Nebuta Matsuri</strong> en Aomori (agosto) es conocido por sus enormes faroles de papel que representan guerreros mitológicos.</li>
-                        <li><strong>Bonsái e Ikebana:</strong> El bonsái es el arte de cultivar árboles en miniatura, una práctica que busca recrear la esencia de la naturaleza en un espacio reducido. El ikebana es el arte floral japonés, que no se limita a colocar flores, sino que busca crear armonía entre la flor, el recipiente y el espacio. Ambos son expresiones de la conexión con la naturaleza y la búsqueda de la belleza en lo simple.</li>
-                        <li><strong>Onsen y Ryokan:</strong> Los baños termales (onsen) son una parte esencial de la cultura japonesa. No solo son un lugar para relajarse, sino que también tienen propiedades curativas gracias a sus aguas minerales. Un <strong>ryokan</strong> es una posada tradicional japonesa que ofrece alojamiento en tatami, cenas kaiseki (comida de varios platos) y, a menudo, acceso a sus propios onsen. Dormir en un ryokan y disfrutar de un baño termal es una experiencia imprescindible para sumergirse en la auténtica hospitalidad japonesa (<em>omotenashi</em>).</li>
-                    </ul>
+                    <div class="grid-cards">
+                        <div class="info-card">
+                            <span class="card-icon">🍵</span>
+                            <h4>Ceremonia del té (sado)</h4>
+                            <p>Es un arte que refleja la estética japonesa de la sencillez, la atención plena y la conexión con la naturaleza. Se basa en la preparación y el consumo de té matcha (té verde en polvo) en un ambiente de total serenidad. Puedes vivir esta experiencia en Kioto o en Tokio, en casas de té tradicionales. No es solo beber té, sino un ritual que implica cada movimiento, desde la forma de sostener la taza hasta la manera de inclinarse ante el anfitrión.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="card-icon">🎭</span>
+                            <h4>Festivales (matsuri)</h4>
+                            <p>Japón celebra cientos de festivales a lo largo del año, cada uno con su propia historia y significado. El <strong>Gion Matsuri</strong> en Kioto (julio) es uno de los más famosos, con sus carrozas decoradas y su procesión de más de 30 carros de madera. El <strong>Kanda Matsuri</strong> en Tokio (mayo) es una celebración dedicada al santuario de Kanda, con desfiles de mikoshi (santuarios portátiles). El <strong>Nebuta Matsuri</strong> en Aomori (agosto) es conocido por sus enormes faroles de papel que representan guerreros mitológicos.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="card-icon">🌿</span>
+                            <h4>Bonsái e Ikebana</h4>
+                            <p>El bonsái es el arte de cultivar árboles en miniatura, una práctica que busca recrear la esencia de la naturaleza en un espacio reducido. El ikebana es el arte floral japonés, que no se limita a colocar flores, sino que busca crear armonía entre la flor, el recipiente y el espacio. Ambos son expresiones de la conexión con la naturaleza y la búsqueda de la belleza en lo simple.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="card-icon">♨️</span>
+                            <h4>Onsen y Ryokan</h4>
+                            <p>Los baños termales (onsen) son una parte esencial de la cultura japonesa. No solo son un lugar para relajarse, sino que también tienen propiedades curativas gracias a sus aguas minerales. Un <strong>ryokan</strong> es una posada tradicional japonesa que ofrece alojamiento en tatami, cenas kaiseki (comida de varios platos) y, a menudo, acceso a sus propios onsen. Dormir en un ryokan y disfrutar de un baño termal es una experiencia imprescindible para sumergirse en la auténtica hospitalidad japonesa (<em>omotenashi</em>).</p>
+                        </div>
+                    </div>
                 </section>
 
-                <!-- GASTRONOMÍA (con diseño mejorado) -->
+                <!-- GASTRONOMÍA (mejorado con tarjetas) -->
                 <section id="gastronomia">
                     <h2 class="section-title">🍣 Gastronomía japonesa</h2>
                     <p>La cocina japonesa es Patrimonio Inmaterial de la Humanidad por la UNESCO, y no es para menos. Es una de las más equilibradas, saludables y sabrosas del mundo. Aquí te mostramos los platos que no puedes dejar de probar durante tu estancia.</p>
 
-                    <div class="grid-dishes">
-                        <div class="dish-card">
-                            <span class="dish-icon">🍣</span>
+                    <div class="grid-cards">
+                        <div class="info-card">
+                            <span class="card-icon">🍣</span>
                             <h4>Sushi y sashimi</h4>
                             <p>El sushi es arroz avinagrado acompañado de pescado fresco (crudo o marinado), marisco o vegetales. El sashimi es el pescado crudo solo, sin arroz. Los mejores se encuentran en el mercado de Toyosu en Tokio o en restaurantes de Kioto. No olvides mojarlos ligeramente en salsa de soja y acompañarlos con wasabi y jengibre encurtido para limpiar el paladar entre piezas.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🍜</span>
+                        <div class="info-card">
+                            <span class="card-icon">🍜</span>
                             <h4>Ramen</h4>
                             <p>Esta sopa de fideos con caldo puede ser de cerdo (tonkotsu), soja (shoyu), miso o sal (shio). Cada región tiene su estilo. En Fukuoka es famoso el tonkotsu, cremoso y potente; en Sapporo, el miso con mantequilla y maíz. El ramen se sirve con huevo cocido, rodajas de cerdo chashu, cebollino y alga nori. Es una comida rápida, pero muy contundente.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🍤</span>
+                        <div class="info-card">
+                            <span class="card-icon">🍤</span>
                             <h4>Tempura</h4>
                             <p>Verduras y marisco rebozados en una masa ligera y fritos hasta que quedan crujientes. La tempura se sirve con una salsa a base de caldo, salsa de soja y mirin. Los mejores locales de tempura son aquellos especializados, donde el chef fríe los ingredientes en el momento para que lleguen a la mesa en su punto justo.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🍱</span>
+                        <div class="info-card">
+                            <span class="card-icon">🍱</span>
                             <h4>Kaiseki</h4>
                             <p>Es la alta cocina japonesa, un menú de varios platos que es una verdadera obra de arte culinaria. Cada plato está presentado con una estética impecable, utilizando ingredientes de temporada y técnicas tradicionales. Es una experiencia gastronómica que puede durar varias horas y que suele servirse en ryokan o en restaurantes de lujo.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🥞</span>
+                        <div class="info-card">
+                            <span class="card-icon">🥞</span>
                             <h4>Okonomiyaki</h4>
                             <p>Una tortita salada que significa "cocina lo que quieras". Se prepara con una base de repollo, harina, huevo y un relleno a elección (cerdo, marisco, queso). Se cocina en una plancha y se sirve con salsa especial, mayonesa, alga nori y copos de bonito seco que se mueven con el calor.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🐙</span>
+                        <div class="info-card">
+                            <span class="card-icon">🐙</span>
                             <h4>Takoyaki</h4>
                             <p>Bolas de pulpo típicas de Osaka. Se elaboran con una masa líquida de harina y huevo, y se rellenan con trozos de pulpo, jengibre encurtido y tempura. Se cocinan en un molde especial con forma de esfera y se sirven con salsa takoyaki, mayonesa y alga.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🍡</span>
+                        <div class="info-card">
+                            <span class="card-icon">🍡</span>
                             <h4>Mochi</h4>
                             <p>Pastelitos de arroz glutinoso machacado, rellenos de pasta de judía roja dulce (anko). Pueden ser redondos, cuadrados o incluso coloreados. Son típicos en el Año Nuevo y también se comen en cualquier época del año. Tienen una textura elástica y un sabor suave que combina perfectamente con el té verde.</p>
                         </div>
@@ -1053,32 +1082,32 @@
                     </div>
                 </section>
 
-                <!-- TRANSPORTE (con diseño mejorado) -->
+                <!-- TRANSPORTE (mejorado con tarjetas) -->
                 <section id="transporte">
                     <h2 class="section-title">🚄 Transporte y movilidad en Japón</h2>
                     <p>Japón tiene la red de transporte más eficiente, puntual y limpia del mundo. Moverse por el país es una experiencia en sí misma. Aquí tienes todo lo que necesitas saber.</p>
 
-                    <div class="grid-dishes">
-                        <div class="dish-card">
-                            <span class="dish-icon">🎫</span>
+                    <div class="grid-cards">
+                        <div class="info-card">
+                            <span class="card-icon">🎫</span>
                             <h4>Japan Rail Pass (JR Pass)</h4>
                             <p>Es un pase de tren ilimitado exclusivo para turistas extranjeros. Permite viajar en todos los trenes de la red JR, incluidos los Shinkansen (trenes bala) excepto las líneas Nozomi y Mizuho. Se compra <strong>antes de viajar</strong> en agencias autorizadas o en línea. Hay pases de 7, 14 y 21 días. Es una inversión que se amortiza si planeas moverte entre varias ciudades. Por ejemplo, un viaje de ida y vuelta Tokio-Kioto en Shinkansen ya cuesta casi lo mismo que un JR Pass de 7 días.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🚅</span>
+                        <div class="info-card">
+                            <span class="card-icon">🚅</span>
                             <h4>Shinkansen (tren bala)</h4>
                             <p>Los trenes de alta velocidad conectan las principales ciudades a velocidades superiores a 300 km/h. Son puntuales al segundo, cómodos, con asientos amplios y espacio para equipaje. Existen diferentes tipos de servicio: Nozomi (el más rápido, pero no incluido en el JR Pass), Hikari y Kodama. Es recomendable reservar asiento con antelación en temporada alta (primavera y otoño).</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🚇</span>
+                        <div class="info-card">
+                            <span class="card-icon">🚇</span>
                             <h4>Metro y autobuses urbanos</h4>
                             <p>En Tokio, Kioto y Osaka, el metro es la mejor opción para moverse por el centro. Compra una tarjeta IC (Suica, Pasmo o Icoca) para pagar sin efectivo en trenes, autobuses y también en tiendas de conveniencia. Se recargan en las máquinas de las estaciones y son reutilizables. Los autobuses son útiles para zonas donde no llega el metro.</p>
                         </div>
 
-                        <div class="dish-card">
-                            <span class="dish-icon">🚗</span>
+                        <div class="info-card">
+                            <span class="card-icon">🚗</span>
                             <h4>Alquiler de coche</h4>
                             <p>En zonas rurales como Hokkaido, la península de Izu o la isla de Shikoku, alquilar un coche puede ser práctico. Necesitas carné de conducir internacional y un buen navegador GPS (la mayoría de los coches de alquiler lo incluyen). Las autopistas japonesas son de peaje y los precios pueden ser elevados, pero permiten llegar a lugares que el transporte público no cubre.</p>
                         </div>
@@ -1089,38 +1118,49 @@
                     </div>
                 </section>
 
-                <!-- ITINERARIOS -->
+                <!-- ITINERARIOS (mejorado con tarjetas) -->
                 <section id="itinerarios">
                     <h2 class="section-title">🗺️ Itinerarios recomendados para Japón</h2>
                     <p>Dependiendo del tiempo que tengas, estos son los planes más equilibrados para aprovechar al máximo tu viaje. Hemos incluido opciones para 7, 10 y 14 días, con un ritmo que permite disfrutar sin agobios.</p>
 
-                    <h3>Itinerario de 7 días (Japón clásico)</h3>
-                    <ul>
-                        <li><strong>Día 1-2:</strong> Tokio (Shibuya, Shinjuku, Asakusa). El primer día, llega a Tokio y después de instalarte, date un paseo por Shibuya para ver el famoso cruce. El segundo día, dedícalo a Asakusa, el templo Sensō-ji y la Tokyo SkyTree por la tarde para ver el atardecer.</li>
-                        <li><strong>Día 3:</strong> Excursión al Monte Fuji (Hakone o Kawaguchiko). Toma el tren hacia Hakone y disfruta de las vistas del Fuji desde los lagos y los onsen. Puedes hacer el circuito de Hakone con teleférico, barco y tren de montaña.</li>
-                        <li><strong>Día 4-5:</strong> Kioto (templos, Fushimi Inari, Gion). Llega a Kioto y visita el pabellón dorado (Kinkaku-ji) y el bosque de bambú de Arashiyama. El día 5, recorre Fushimi Inari y sus torii rojos, y por la tarde pasea por Gion.</li>
-                        <li><strong>Día 6:</strong> Nara (templos y ciervos) o Osaka (castillo y Dotonbori). Si eliges Nara, verás el Gran Buda y los ciervos. Si prefieres Osaka, el castillo y la animada Dotonbori te esperan.</li>
-                        <li><strong>Día 7:</strong> Regreso a Tokio para el vuelo. Toma el Shinkansen de vuelta a Tokio con tiempo para recoger tus cosas y llegar al aeropuerto.</li>
-                    </ul>
+                    <div class="grid-cards">
+                        <div class="info-card">
+                            <span class="card-icon">🗓️</span>
+                            <h4>Itinerario de 7 días (Japón clásico)</h4>
+                            <ul>
+                                <li><strong>Día 1-2:</strong> Tokio (Shibuya, Shinjuku, Asakusa). El primer día, llega a Tokio y después de instalarte, date un paseo por Shibuya para ver el famoso cruce. El segundo día, dedícalo a Asakusa, el templo Sensō-ji y la Tokyo SkyTree por la tarde para ver el atardecer.</li>
+                                <li><strong>Día 3:</strong> Excursión al Monte Fuji (Hakone o Kawaguchiko). Toma el tren hacia Hakone y disfruta de las vistas del Fuji desde los lagos y los onsen. Puedes hacer el circuito de Hakone con teleférico, barco y tren de montaña.</li>
+                                <li><strong>Día 4-5:</strong> Kioto (templos, Fushimi Inari, Gion). Llega a Kioto y visita el pabellón dorado (Kinkaku-ji) y el bosque de bambú de Arashiyama. El día 5, recorre Fushimi Inari y sus torii rojos, y por la tarde pasea por Gion.</li>
+                                <li><strong>Día 6:</strong> Nara (templos y ciervos) o Osaka (castillo y Dotonbori). Si eliges Nara, verás el Gran Buda y los ciervos. Si prefieres Osaka, el castillo y la animada Dotonbori te esperan.</li>
+                                <li><strong>Día 7:</strong> Regreso a Tokio para el vuelo. Toma el Shinkansen de vuelta a Tokio con tiempo para recoger tus cosas y llegar al aeropuerto.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Itinerario de 10 días (el imprescindible)</h3>
-                    <ul>
-                        <li><strong>Día 1-3:</strong> Tokio (con excursión a Nikko o Kamakura). Además de lo anterior, añade una excursión a Nikko (templos y cascadas) o a Kamakura (el gran Buda).</li>
-                        <li><strong>Día 4-6:</strong> Kioto (con visitas a Arashiyama y Uji). En Kioto, dedica un día a Arashiyama, otro a los templos del este (Kiyomizu, Yasaka) y otro a Uji, famoso por su té matcha y el templo Byodo-in.</li>
-                        <li><strong>Día 7:</strong> Nara y Osaka (combinado). Ve a Nara por la mañana (está a solo 30 minutos de Kioto) y por la tarde a Osaka para cenar en Dotonbori.</li>
-                        <li><strong>Día 8-9:</strong> Hiroshima y Miyajima. Toma el Shinkansen hasta Hiroshima, visita el Parque de la Paz y, al día siguiente, la isla de Miyajima con su torii flotante.</li>
-                        <li><strong>Día 10:</strong> Regreso a Tokio en Shinkansen para tomar el vuelo de vuelta.</li>
-                    </ul>
+                        <div class="info-card">
+                            <span class="card-icon">🗓️</span>
+                            <h4>Itinerario de 10 días (el imprescindible)</h4>
+                            <ul>
+                                <li><strong>Día 1-3:</strong> Tokio (con excursión a Nikko o Kamakura). Además de lo anterior, añade una excursión a Nikko (templos y cascadas) o a Kamakura (el gran Buda).</li>
+                                <li><strong>Día 4-6:</strong> Kioto (con visitas a Arashiyama y Uji). En Kioto, dedica un día a Arashiyama, otro a los templos del este (Kiyomizu, Yasaka) y otro a Uji, famoso por su té matcha y el templo Byodo-in.</li>
+                                <li><strong>Día 7:</strong> Nara y Osaka (combinado). Ve a Nara por la mañana (está a solo 30 minutos de Kioto) y por la tarde a Osaka para cenar en Dotonbori.</li>
+                                <li><strong>Día 8-9:</strong> Hiroshima y Miyajima. Toma el Shinkansen hasta Hiroshima, visita el Parque de la Paz y, al día siguiente, la isla de Miyajima con su torii flotante.</li>
+                                <li><strong>Día 10:</strong> Regreso a Tokio en Shinkansen para tomar el vuelo de vuelta.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Itinerario de 14 días (Japón profundo)</h3>
-                    <ul>
-                        <li><strong>Día 1-4:</strong> Tokio (incluyendo barrios modernos como Roppongi y Odaiba). Aprovecha para visitar el museo Ghibli, el barrio de Akihabara y el centro de Tokio.</li>
-                        <li><strong>Día 5-7:</strong> Kioto y Nara. Profundiza en Kioto con visitas a templos menos conocidos como Daitoku-ji y el jardín de Ryoan-ji.</li>
-                        <li><strong>Día 8-9:</strong> Osaka y Kobe. En Osaka, además de Dotonbori, visita el barrio de Shinsekai. En Kobe, prueba su famosa carne y disfruta de las vistas desde el monte Rokko.</li>
-                        <li><strong>Día 10-11:</strong> Hiroshima y Miyajima. Con tiempo para explorar más a fondo el Parque de la Paz y la isla de Miyajima, subiendo al monte Misen.</li>
-                        <li><strong>Día 12-13:</strong> Kanazawa y Shirakawa-go (pueblo histórico). Kanazawa tiene el jardín Kenroku-en y el distrito de samuráis. Shirakawa-go es un pueblo con casas de paja (gassho-zukuri) declarado Patrimonio de la Humanidad.</li>
-                        <li><strong>Día 14:</strong> Regreso a Tokio.</li>
-                    </ul>
+                        <div class="info-card">
+                            <span class="card-icon">🗓️</span>
+                            <h4>Itinerario de 14 días (Japón profundo)</h4>
+                            <ul>
+                                <li><strong>Día 1-4:</strong> Tokio (incluyendo barrios modernos como Roppongi y Odaiba). Aprovecha para visitar el museo Ghibli, el barrio de Akihabara y el centro de Tokio.</li>
+                                <li><strong>Día 5-7:</strong> Kioto y Nara. Profundiza en Kioto con visitas a templos menos conocidos como Daitoku-ji y el jardín de Ryoan-ji.</li>
+                                <li><strong>Día 8-9:</strong> Osaka y Kobe. En Osaka, además de Dotonbori, visita el barrio de Shinsekai. En Kobe, prueba su famosa carne y disfruta de las vistas desde el monte Rokko.</li>
+                                <li><strong>Día 10-11:</strong> Hiroshima y Miyajima. Con tiempo para explorar más a fondo el Parque de la Paz y la isla de Miyajima, subiendo al monte Misen.</li>
+                                <li><strong>Día 12-13:</strong> Kanazawa y Shirakawa-go (pueblo histórico). Kanazawa tiene el jardín Kenroku-en y el distrito de samuráis. Shirakawa-go es un pueblo con casas de paja (gassho-zukuri) declarado Patrimonio de la Humanidad.</li>
+                                <li><strong>Día 14:</strong> Regreso a Tokio.</li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <div class="box box-tip">
                         <strong>💡 Consejo:</strong> Compra el JR Pass de 7 o 14 días según tu itinerario. Reserva hoteles con antelación, especialmente en temporada de cerezos (abril) y otoño (noviembre), cuando la demanda es altísima.
@@ -1576,4 +1616,4 @@
     </script>
 
 </body>
-</html>
+    </html>
