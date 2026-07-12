@@ -25,6 +25,7 @@
     <meta name="twitter:title" content="Guía Japón 2026 · Viajar a Japón" />
     <meta name="twitter:description" content="Guía definitiva para viajar a Japón en 2026: mejores lugares, itinerarios, cultura, gastronomía y consejos." />
 
+    <!-- SCHEMA.ORG -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -36,7 +37,7 @@
             "datePublished": "2026-07-11",
             "dateModified": "2026-07-12",
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://guia-japon.vercel.app" },
-            "wordCount": "6000"
+            "wordCount": "6500"
         }
     </script>
     <script type="application/ld+json">
@@ -335,6 +336,7 @@
             color: var(--color-gold);
             font-size: 1.4rem;
         }
+
         .card {
             background: var(--color-surface);
             border-radius: var(--radius);
@@ -352,6 +354,12 @@
             margin-bottom: 0.5rem;
             color: var(--color-accent);
         }
+        .card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -364,7 +372,7 @@
         }
         .grid-dishes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.8rem;
         }
         .dish-card {
@@ -390,7 +398,13 @@
         .dish-card p {
             color: var(--color-text-muted);
             font-size: 0.95rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            margin-bottom: 0.3rem;
+        }
+        .dish-card .dish-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.3rem;
         }
 
         .toc {
@@ -676,13 +690,4 @@
             display: inline-block;
             margin-top: 0.6rem;
             font-weight: 500;
-            font-size: 0.9rem;
-        }
-        @media (prefers-color-scheme: dark) {
-            .legal-card {
-                background: #2a241f;
-            }
-        }
-
-        footer {
-           
+            font-size:
